@@ -1,0 +1,26 @@
+//Write a Java program that removes duplicate elements from a LinkedList.
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.Set;
+
+public class arraylist
+{
+    public static void main(String[] args)
+    {
+        ArrayList<Integer> list = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        for (int i = 0; i < n; i++)
+        {
+           ;
+            int userInput = scanner.nextInt();
+            list.add(userInput);
+        }
+       System.out.println(list);
+        Set<Integer> set = new HashSet<>(list);
+        list = new ArrayList<>(set);
+        System.out.println("After removing  duplicate elements: " + list);
+    }
+}
