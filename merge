@@ -1,0 +1,38 @@
+//Write a Java program to merge two sorted LinkedList instances into one sorted LinkedList
+
+import java.util.*;
+import java.util.ArrayList;
+public class merge
+{
+    public static void main(String[] args)
+    {
+        LinkedList<Integer> list = new LinkedList<>();
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        for (int i = 0; i < n; i++)
+        {
+            int userInput = scanner.nextInt();
+            list.add(userInput);
+        }
+        System.out.println(list);
+
+        LinkedList<Integer> list1 = new LinkedList<>();
+        Scanner obj = new Scanner(System.in);
+        int n1 = obj.nextInt();
+        for (int j = 0; j < n1; j++)
+        {
+            int userInput1 = obj.nextInt();
+            list1.add(userInput1);
+        }
+        System.out.println(list1);
+
+        LinkedList<Integer> mergedList = new LinkedList<>(list);
+        mergedList.addAll(list1);
+
+        // Sort the merged LinkedList
+        Collections.sort(mergedList);
+
+        // Print the merged and sorted LinkedList
+        System.out.println("Merged and Sorted LinkedList: " + mergedList);
+    }
+}
