@@ -1,0 +1,31 @@
+//Write a Java program to remove all elements from a TreeSet that are less than a specified value.
+import java.util.Scanner;
+import java.util.TreeSet;
+import java.util.Iterator;
+
+class treeSet
+{
+    public static void main(String[] args)
+    {
+        TreeSet<Integer> numbers = new TreeSet<>();
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        for (int i = 0; i < n; i++)
+        {
+            int userInput = scanner.nextInt();
+            numbers.add(userInput);
+        }
+        System.out.println(numbers);
+
+        int threshold = 30;
+        Iterator<Integer> iterator = numbers.iterator();
+        while (iterator.hasNext())
+        {
+            if (iterator.next() < threshold)
+            {
+                iterator.remove();
+            }
+        }
+        System.out.println("TreeSet after removal: " + numbers);
+    }
+}
