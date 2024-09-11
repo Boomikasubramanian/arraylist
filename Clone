@@ -1,0 +1,29 @@
+//Write a Java program to clone a Vector and modify the clone to ensure the original vector remains unchanged.
+
+import java.util.Vector;
+public class clone
+{
+    public static void main(String[] args) {
+
+        Vector<Integer> originalVector = new Vector<>();
+        originalVector.add(10);
+        originalVector.add(20);
+        originalVector.add(30);
+
+        Vector<Integer> clonedVector = (Vector<Integer>) originalVector.clone();
+        System.out.println( "clonevec"+clonedVector);
+
+        clonedVector.add(40);
+        clonedVector.remove(0);
+
+        System.out.println("Original Vector: " + originalVector);
+        System.out.println("Cloned Vector (modified): " + clonedVector);
+
+        if(originalVector==clonedVector)
+        {
+            System.out.println("true");
+        }else
+            System.out.print("false");
+    }
+}
+
