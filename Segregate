@@ -1,0 +1,18 @@
+import java.util.*;
+class segregate {
+    public static void main(String[] args)
+    {
+        Scanner s= new Scanner(System.in);
+        ArrayList<Integer>list = new ArrayList<>();
+        while(true){
+            int n = s.nextInt();
+            if(n==-1)
+                break;
+            else{
+                list.add(n);
+            }
+        }
+        Collections.sort(list);
+        System.out.print(list);
+   }
+}
